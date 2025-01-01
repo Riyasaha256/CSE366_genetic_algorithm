@@ -81,10 +81,10 @@ The project is divided into three main Python classes:
              
 2. **Fitness Evaluation:** Each individual in the population is evaluated using the fitness function, which considers conflicts, student preferences, and schedule balance.
             # Fitness Function (Conflict Minimization and Preference Alignment)
-def fitness(individual):
-    """Calculate fitness of the schedule by minimizing conflict and preference penalties."""
-    conflict_penalty = 0
-    preference_penalty = 0
+           def fitness(individual):
+           """Calculate fitness of the schedule by minimizing conflict and preference penalties."""
+                conflict_penalty = 0
+              preference_penalty = 0
 
 
  #  Check each class assigned in the individual's schedule
@@ -107,9 +107,9 @@ def fitness(individual):
 
 
      # Selection Function (Selecting the top half of the population based on fitness)
-    def selection(population):
-    """Selects the top half of the population based on fitness."""
-    return sorted(population, key=fitness)[:population_size // 2]
+            def selection(population):
+              """Selects the top half of the population based on fitness."""
+             return sorted(population, key=fitness)[:population_size // 2]
 
         
 4. **Crossover:** Parents are paired to create new offspring using single-point crossover, where the schedules of two parents are combined at a random point.
