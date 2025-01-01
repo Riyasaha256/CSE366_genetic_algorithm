@@ -114,14 +114,15 @@ The project is divided into three main Python classes:
         
 4. **Crossover:** Parents are paired to create new offspring using single-point crossover, where the schedules of two parents are combined at a random point.
 
-     # Crossover Function (Single-Point Crossover)
+   
 
+
+# Crossover Function (Single-Point Crossover)
 def crossover(parent1, parent2):
     """Performs single-point crossover to combine two parent schedules."""
     point = random.randint(1, num_classes - 1)
     child = np.concatenate([parent1[:point], parent2[point:]])
     return child
-
 
 
 5. **Mutation:** Some offspring schedules are mutated by randomly reassigning classes to different students to maintain genetic diversity.
